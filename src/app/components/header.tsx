@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 
@@ -6,7 +7,7 @@ const header = () => {
     <header style={styles.header}>
       <div style={styles.headerContent}>
         <h1 style={styles.logo}>
-          <a href="/">FOXLAB</a>
+          <Link href="/">FOXLAB</Link>
         </h1>
         <div style={styles.contactLinks}>
           <a style={styles.contactItem} href="mailto:root@foxlab.com">
