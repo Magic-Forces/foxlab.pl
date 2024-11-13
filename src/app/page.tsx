@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -19,11 +18,11 @@ const styles = {
   container: {
     minHeight: "100vh",
     display: "flex",
-    flexDirection: "column" as "column",
+    flexDirection: "column" as const,
     justifyContent: "space-between",
   },
   main: {
     padding: "20px",
-    textAlign: "center" as "center",
+    textAlign: "center" as const,
   },
 };
