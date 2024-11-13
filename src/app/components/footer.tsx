@@ -1,4 +1,4 @@
-const Footer = () => {
+const footer = () => {
   return (
     <footer style={styles.footer}>
       <p>FOXLAB</p>
@@ -15,4 +15,4 @@ const styles = {
   },
 };
 
-export default Footer;
+export default footer;

@@ -1,12 +1,13 @@
-// components/Header.tsx
 import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 
-const Header = () => {
+const header = () => {
   return (
     <header style={styles.header}>
       <div style={styles.headerContent}>
-        <h1 style={styles.logo}>FOXLAB</h1>
+        <h1 style={styles.logo}>
+          <a href="/">FOXLAB</a>
+        </h1>
         <div style={styles.contactLinks}>
           <a style={styles.contactItem} href="mailto:root@foxlab.com">
             <FaEnvelope />
@@ -50,12 +51,9 @@ const styles = {
   headerContent: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
   },
   logo: {
     margin: 0,
-    transition: "color 0.3s",
-    cursor: "pointer",
   },
   contactLinks: {
     display: "flex",
@@ -63,9 +61,8 @@ const styles = {
   },
   contactItem: {
     color: "#fff",
-    textDecoration: "none",
     fontSize: "1.5em",
   },
 };
 
-export default Header;
+export default header;
