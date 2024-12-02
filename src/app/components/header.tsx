@@ -5,7 +5,7 @@ import { FaGithub, FaInstagram, FaEnvelope, FaKey } from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 import { useState } from "react";
 
-const header = () => {
+const Header = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -140,4 +140,4 @@ const styles = {
   },
 };
 
-export default header;
+export default Header;
