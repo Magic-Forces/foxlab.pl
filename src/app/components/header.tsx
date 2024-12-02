@@ -31,7 +31,7 @@ const Header = () => {
                   style={styles.downloadLink}
                 >
                   <FaKey style={styles.keyIcon} />
-                  <span style={styles.linkText}>PGP Key</span>
+                  <span style={styles.linkText}>GPG Key</span>
                 </a>
                 <div style={styles.arrow}></div>
               </div>
