@@ -42,7 +42,6 @@ const styles = {
     borderTop: "2px solid #FFA500",
   },
   monero: {
-    marginTop: "10px",
     fontSize: "0.9em",
   },
   address: {
