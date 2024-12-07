@@ -7,13 +7,14 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2>FOXLAB</h2>
+        <h2 style={styles.title}>FOXLAB</h2>
       </main>
 
       <Footer />
     </div>
   );
 }
+
 const styles = {
   container: {
     minHeight: "100vh",
@@ -24,5 +25,17 @@ const styles = {
   main: {
     padding: "20px",
     textAlign: "center" as const,
+  },
+  title: {
+    fontSize: "3rem",
+    fontWeight: "bold",
+    color: "#FFA500",
+    textShadow: `
+      0 0 10px #FF8C00,
+      0 0 20px #FF8C00,
+      0 0 30px #FF4500,
+      0 0 40px #FF4500,
+      0 0 50px #FF6347
+    `,
   },
 };

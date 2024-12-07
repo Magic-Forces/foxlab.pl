@@ -69,10 +69,11 @@ const Header = () => {
 
 const styles = {
   header: {
-    backgroundColor: "#333",
-    color: "#fff",
+    backgroundColor: "#1A1A1A",
+    color: "#F4F4F4",
     padding: "20px",
     paddingBottom: "10px",
+    borderBottom: "2px solid #FFA500",
   },
   headerContent: {
     display: "flex",
@@ -92,16 +93,16 @@ const styles = {
   },
   icon: {
     textDecoration: "none",
-    color: "#fff",
     fontSize: "1.5em",
+    transition: "color 0.3s ease",
   },
   tooltip: {
     position: "absolute" as const,
     top: "40px",
     left: "50%",
     transform: "translateX(-50%)",
-    backgroundColor: "#555",
-    color: "#fff",
+    backgroundColor: "#2E2E2E",
+    color: "#FFF",
     padding: "10px 15px",
     borderRadius: "8px",
     whiteSpace: "nowrap" as const,
@@ -111,12 +112,12 @@ const styles = {
     textAlign: "center" as const,
   },
   keyIcon: {
-    color: "#4CAF50",
+    color: "#F4F4F4",
     fontSize: "1.2em",
     marginRight: "5px",
   },
   linkText: {
-    color: "#fff",
+    color: "#FFA500",
     textDecoration: "none",
     fontWeight: "bold",
   },
@@ -129,14 +130,14 @@ const styles = {
     height: 0,
     borderLeft: "8px solid transparent",
     borderRight: "8px solid transparent",
-    borderBottom: "8px solid #555",
+    borderBottom: "8px solid #2E2E2E",
   },
   downloadLink: {
     display: "flex",
     alignItems: "center",
     gap: "5px",
     textDecoration: "none",
-    color: "#fff",
+    color: "#FFF",
   },
 };
 
