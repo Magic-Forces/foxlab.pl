@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SiMonero } from "react-icons/si"; // Dodaj ikonę Monero
 
 const Footer = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -24,10 +25,11 @@ const Footer = () => {
             color: isCopied ? "#4CAF50" : "#FFA500",
           }}
           onClick={handleCopy}
-          title="Copy the full address"
+          title="Copy monero address"
         >
           {moneroAddress.slice(0, 6)}...{moneroAddress.slice(-6)}
         </span>
+        <SiMonero style={styles.icon} />
       </p>
     </footer>
   );
@@ -43,6 +45,15 @@ const styles = {
   },
   monero: {
     fontSize: "0.9em",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+  },
+  icon: {
+    fontSize: "1.2em",
+    color: "#FFA500",
+    cursor: "default",
   },
   address: {
     display: "inline-block",
