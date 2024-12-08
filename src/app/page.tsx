@@ -7,7 +7,10 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2 style={styles.title}>FOXLAB</h2>
+        <h2 style={styles.title}>
+          <span style={styles.textWithSpacing}>FOXLA</span>
+          <span style={styles.lastLetter}>B</span>
+        </h2>
       </main>
 
       <Footer />
@@ -27,9 +30,9 @@ const styles = {
     textAlign: "center" as const,
   },
   title: {
-    fontSize: "3rem",
-    fontWeight: "bold",
+    fontSize: "4rem",
     color: "#FFA500",
+    fontFamily: "NeonTube, sans-serif",
     textShadow: `
       0 0 10px #FF8C00,
       0 0 20px #FF8C00,
@@ -37,5 +40,16 @@ const styles = {
       0 0 40px #FF4500,
       0 0 50px #FF6347
     `,
+    textDecoration: "underline",
+    textDecorationColor: "#FFA500",
+    textDecorationThickness: "6px",
+    textUnderlineOffset: "2px",
+    display: "inline-flex",
+  },
+  textWithSpacing: {
+    letterSpacing: "0.2em", // Zastosowanie odstępów między literami
+  },
+  lastLetter: {
+    letterSpacing: "0", // Brak odstępów dla ostatnich liter "AB"
   },
 };
