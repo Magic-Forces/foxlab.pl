@@ -7,11 +7,21 @@ const Footer = () => {
   const [isCopied, setIsCopied] = useState(false);
   const moneroAddress =
     "44TRuabNWHUgDgTV8f1vdmi5XEnSr6eapN3ZsaByuxsTjinRNSu4gUUXpixRc2qvAX7ojZXBfkdmHDKZMVei5bEqNFCj3SC";
+  const recipientName = "FoxLab";
+  const description = "Donate";
 
-  const handleCopy = () => {
+  const handleAction = () => {
     navigator.clipboard.writeText(moneroAddress).then(() => {
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
+
+      const uri = `monero:${moneroAddress}?recipient_name=${encodeURIComponent(
+        recipientName
+      )}&tx_description=${encodeURIComponent(description)}`;
+
+      setTimeout(() => {
+        window.location.href = uri;
+      }, 500);
     });
   };
 
@@ -24,8 +34,8 @@ const Footer = () => {
             ...styles.address,
             color: isCopied ? "#4CAF50" : "#FFA500",
           }}
-          onClick={handleCopy}
-          title="Copy monero address"
+          onClick={handleAction}
+          title="Copy Monero address and open URI"
         >
           {moneroAddress.slice(0, 6)}...{moneroAddress.slice(-6)}
         </span>
