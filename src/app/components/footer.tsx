@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SiMonero } from "react-icons/si"; // Dodaj ikonę Monero
+import { FaMonero } from "react-icons/fa";
 
 const Footer = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -29,7 +29,7 @@ const Footer = () => {
         >
           {moneroAddress.slice(0, 6)}...{moneroAddress.slice(-6)}
         </span>
-        <SiMonero style={styles.icon} />
+        <FaMonero style={styles.icon} />
       </p>
     </footer>
   );

@@ -45,11 +45,12 @@ const styles = {
     textDecorationThickness: "6px",
     textUnderlineOffset: "2px",
     display: "inline-flex",
+    userSelect: "none" as const,
   },
   textWithSpacing: {
-    letterSpacing: "0.2em", // Zastosowanie odstępów między literami
+    letterSpacing: "0.2em",
   },
   lastLetter: {
-    letterSpacing: "0", // Brak odstępów dla ostatnich liter "AB"
+    letterSpacing: "0",
   },
 };
