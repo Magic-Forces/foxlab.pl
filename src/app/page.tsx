@@ -7,10 +7,7 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2 style={styles.title}>
-          <span style={styles.textWithSpacing}>FOXLA</span>
-          <span style={styles.lastLetter}>B</span>
-        </h2>
+        <h2 style={styles.title}>FOXLAB</h2>
       </main>
 
       <Footer />
@@ -40,17 +37,6 @@ const styles = {
       0 0 40px #FF4500,
       0 0 50px #FF6347
     `,
-    textDecoration: "underline",
-    textDecorationColor: "#FFA500",
-    textDecorationThickness: "6px",
-    textUnderlineOffset: "2px",
-    display: "inline-flex",
-    userSelect: "none" as const,
-  },
-  textWithSpacing: {
     letterSpacing: "0.2em",
-  },
-  lastLetter: {
-    letterSpacing: "0",
   },
 };
