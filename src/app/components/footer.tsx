@@ -68,7 +68,6 @@ const styles = {
   address: {
     display: "inline-block",
     marginLeft: "5px",
-    fontFamily: "monospace",
     cursor: "pointer",
     textDecoration: "underline",
     transition: "color 0.3s ease",

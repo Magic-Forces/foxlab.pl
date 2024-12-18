@@ -12,7 +12,7 @@ const Header = () => {
     <header style={styles.header}>
       <div style={styles.headerContent}>
         <h1 style={styles.logo}>
-          <Link href="/">FOXLAB</Link>
+          <Link href="/">&lt;LOGO&gt;</Link>
         </h1>
         <div style={styles.contactLinks}>
           <div
@@ -37,6 +37,7 @@ const Header = () => {
               </div>
             )}
           </div>
+          /
           <a
             style={styles.icon}
             href="https://github.com/magic-forces"
@@ -45,6 +46,7 @@ const Header = () => {
           >
             <FaGithub />
           </a>
+          /
           <a
             style={styles.icon}
             href="https://matrix.to/#/@magic_forces:foxlab.pl"
@@ -53,6 +55,7 @@ const Header = () => {
           >
             <SiMatrix />
           </a>
+          /
           <a
             style={styles.icon}
             href="https://instagram.com/pyra.png"

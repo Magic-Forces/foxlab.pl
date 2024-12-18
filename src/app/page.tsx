@@ -7,7 +7,7 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2 style={styles.title}>FOXLAB</h2>
+        <h2 style={styles.title}>|[FOXLAB]|</h2>
       </main>
 
       <Footer />
@@ -29,7 +29,6 @@ const styles = {
   title: {
     fontSize: "4rem",
     color: "#FFA500",
-    fontFamily: "NeonTube, sans-serif",
     textShadow: `
       0 0 10px #FF8C00,
       0 0 20px #FF8C00,
