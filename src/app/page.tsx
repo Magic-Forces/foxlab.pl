@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isNeonOn, setIsNeonOn] = useState(true);
-  const [isBlinking, setIsBlinking] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -20,17 +19,25 @@ export default function Home() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
+  const blinkNeon = useCallback((min: number, max: number) => {
+    const blinks = getRandomInt(min, max);
+    for (let i = 0; i < blinks; i++) {
+      setTimeout(() => setIsNeonOn((prev) => !prev), i * 200);
+    }
+    setTimeout(() => setIsNeonOn(true), blinks * 200);
+  }, []);
+
   useEffect(() => {
     const neonLoop = () => {
       setIsNeonOn(true);
-      let onTime = getRandomInt(15000, 30000);
+      const onTime = getRandomInt(15000, 35000);
 
       setTimeout(() => {
         blinkNeon(1, 3);
 
         setTimeout(() => {
           setIsNeonOn(false);
-          let offTime = getRandomInt(3000, 5000);
+          const offTime = getRandomInt(3000, 5000);
 
           setTimeout(() => {
             blinkNeon(1, 3);
@@ -41,18 +48,10 @@ export default function Home() {
     };
 
     neonLoop();
-  }, []);
+  }, [blinkNeon]);
 
   const getRandomInt = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
-
-  const blinkNeon = (min: number, max: number) => {
-    let blinks = getRandomInt(min, max);
-    for (let i = 0; i < blinks; i++) {
-      setTimeout(() => setIsNeonOn((prev) => !prev), i * 200);
-    }
-    setTimeout(() => setIsNeonOn(true), blinks * 200);
   };
 
   const styles = {
