@@ -7,7 +7,7 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2 style={styles.title}>FOXLAB</h2>
+        <h2 style={styles.title}>|[FOXLAB]|</h2>
       </main>
 
       <Footer />
