@@ -29,7 +29,6 @@ const styles = {
   title: {
     fontSize: "4rem",
     color: "#FFA500",
-    fontFamily: "NeonTube, sans-serif",
     textShadow: `
       0 0 10px #FF8C00,
       0 0 20px #FF8C00,
