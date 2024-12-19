@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaEnvelope, FaKey } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaEnvelope,
+  FaKey,
+  FaCamera,
+} from "react-icons/fa";
 import { SiMatrix } from "react-icons/si";
 import { useState } from "react";
 
@@ -15,6 +21,30 @@ const Header = () => {
           <Link href="/">&lt;LOGO&gt;</Link>
         </h1>
         <div style={styles.contactLinks}>
+          <a
+            style={styles.icon}
+            href="https://www.shutterstock.com/g/Magic-Forces"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaCamera />
+          </a>
+          <a
+            style={styles.icon}
+            href="https://github.com/magic-forces"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+          <a
+            style={styles.icon}
+            href="https://instagram.com/pyra.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
           <div
             style={styles.tooltipWrapper}
             onMouseEnter={() => setIsHovered(true)}
@@ -37,16 +67,6 @@ const Header = () => {
               </div>
             )}
           </div>
-          /
-          <a
-            style={styles.icon}
-            href="https://github.com/magic-forces"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-          /
           <a
             style={styles.icon}
             href="https://matrix.to/#/@magic_forces:foxlab.pl"
@@ -54,15 +74,6 @@ const Header = () => {
             rel="noopener noreferrer"
           >
             <SiMatrix />
-          </a>
-          /
-          <a
-            style={styles.icon}
-            href="https://instagram.com/pyra.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
           </a>
         </div>
       </div>
